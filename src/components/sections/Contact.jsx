@@ -12,11 +12,14 @@ const Contact = () => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 
+		const form = e.target;
+		const formData = new FormData(form);
+
 		emailjs
 			.sendForm(
 				import.meta.env.VITE_SERVICE_ID,
 				import.meta.env.VITE_TEMPLATE_ID,
-				e.target,
+				form,
 				import.meta.env.VITE_PUBLIC_KEY
 			)
 			.then((result) => {
