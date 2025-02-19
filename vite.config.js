@@ -9,6 +9,7 @@ export default defineConfig({
   preview: {
     port: 3000,
     strictPort: true,
+    allowedHosts: ['solo-web.studio'],
   },
   server: {
     port: 3000,
