@@ -13,4 +13,6 @@ COPY . .
 
 RUN bun run build
 
+EXPOSE 3080
+
 CMD ["bun", "run", "preview"]
